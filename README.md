@@ -50,7 +50,7 @@ T(n) = 9(3T(n/27) + $(n/9)^5$) + $3(n/3)^5$ + $n^5$ <br>
 T(n) = 27T(n/27) + $9(n/9)^5$ + $3(n/3)^5$ + $n^5$ <br>
 
 This can be simplified to: <br>
-T(n) = T(n) = 27T(n/27) + $n^5/9^4$ + $n^5/3^4$ + $n^5$ <br>
+T(n) = 27T(n/27) + $n^5/9^4$ + $n^5/3^4$ + $n^5$ <br>
 
 This continues for each iteration until the base case is reached. <br>
 The pattern seems to be: <br>
