@@ -52,6 +52,10 @@ This continues for each iteration until the base case is reached. <br>
 The pattern seems to be: <br>
 $T(n) = 3^i(n/3^i) + n^5/3^{4(i-1)} + n^5/3^{4(i-2)} + ... + n^5$ <br>
 Since the base case must be achieved, i needs to be $log_3(n)$ to achieve T(1) <br>
-So now we have:
+So now we have: <br>
+$T(n) = 3^{log_3(n)}T(n/3^{log_3(n)}) + n^5/3^{4log_3(n) - 4} + n^5/3^{4log_3(n) - 8} + ... + n^5$ <br>
+$T(n) = nT(1) + n^5/(n^4 * 3^-4) + n^5/(n^4 * 3^-8) + ... + n^5$ <br>
+$T(n) = n + 3^4 * n + 3^8 * n + ... + n^5$ <br>
+At this point and considering the pattern, the lower order terms of n along with their constants can be dropped because asymptotically, $n^5$ is more important than the other terms as it will impact the runtime to the greatest extent. Therefore, the Big $O$ tight bound is $O(n^5)$.
 
 
