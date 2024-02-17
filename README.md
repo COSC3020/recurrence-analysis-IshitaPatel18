@@ -50,7 +50,7 @@ This can be simplified to: <br>
 T(n) = T(n) = 27T(n/27) + $n^5/9^4$ + $n^5/3^4$ + $n^5$
 This continues for each iteration until the base case is reached. <br>
 The pattern seems to be: <br>
-$T(n) = 3^i(n/3^i) + n^5/3^(4(i-1)) + n^5/3^(4(i-2)) + ... + n^5$ <br>
+$T(n) = 3^i(n/3^i) + n^5/3^{4(i-1)} + n^5/3^{4(i-2)} + ... + n^5$ <br>
 Since the base case must be achieved, i needs to be $log_3(n)$ to achieve T(1) <br>
 So now we have:
 
